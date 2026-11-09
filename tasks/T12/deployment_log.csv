@@ -1,0 +1,7 @@
+change_id,title,deployed_by,deployed_at,environment,result
+CHG-5101,Database index rebuild for orders table,M. Chen,2026-02-04 21:00,production,Success
+CHG-5102,API gateway rate-limit configuration,R. Alvarez,2026-03-09 22:40,production,Success
+CHG-5103,TLS certificate rotation - customer portal,T. Nguyen,2026-01-21 01:15,production,Success
+CHG-5104,Payments v2 feature flag rollout,S. Patel,2026-02-19 20:30,production,Success
+CHG-5105,Billing webhook retry hotfix,S. Patel,2026-03-22 18:20,production,Success
+CHG-5106,OS patching - application servers,D. Reyes,2026-03-28 23:05,production,Success

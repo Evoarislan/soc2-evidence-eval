@@ -1,0 +1,97 @@
+{
+  "eval": "SOC 2 Evidence Judgment Eval (micro1 Eval Hackathon)",
+  "model": "meta-api:muse-spark-1.3",
+  "temperature": 0,
+  "mode": "live",
+  "system_prompt_variant": "auditor",
+  "timestamp_utc": "2026-11-05T18:35:53Z",
+  "tasks": [
+    {
+      "id": "T1",
+      "verdict": "Insufficient",
+      "reason": "Dashboard and user list show 3 Contractor workforce users explicitly exempt from MFA with non-MFA sign-ins, contradicting enforcement for all workforce users.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Dashboard and user list show 3 Contractor workforce users explicitly exempt from MFA with non-MFA sign-ins, contradicting enforcement for all workforce users.",
+      "latency_s": 9.546
+    },
+    {
+      "id": "T2",
+      "verdict": "Insufficient",
+      "reason": "No scans fall inside Apr 1-Jun 30 observation period (last Mar 3, next Jul 8), so weekly scanning and in-period remediation not demonstrated.",
+      "raw_output": "VERDICT: Insufficient\nREASON: No scans fall inside Apr 1-Jun 30 observation period (last Mar 3, next Jul 8), so weekly scanning and in-period remediation not demonstrated.",
+      "latency_s": 8.426
+    },
+    {
+      "id": "T3",
+      "verdict": "Insufficient",
+      "reason": "IdP export 2026-06-30 shows Daniel Reyes terminated 2026-06-12 still Active with last_login 2026-06-29, contradicting prompt removal.",
+      "raw_output": "VERDICT: Insufficient\nREASON: IdP export 2026-06-30 shows Daniel Reyes terminated 2026-06-12 still Active with last_login 2026-06-29, contradicting prompt removal.",
+      "latency_s": 6.514
+    },
+    {
+      "id": "T4",
+      "verdict": {
+        "CC6.6": null,
+        "CC7.2": null
+      },
+      "reason": "",
+      "raw_output": "(no content)",
+      "latency_s": 11.748
+    },
+    {
+      "id": "T5",
+      "verdict": "Insufficient",
+      "reason": "Ticket CHG-4417 shows self-approval by requester, no testing evidence, and no post-hoc review by 2026-06-30 in violation of policy.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Ticket CHG-4417 shows self-approval by requester, no testing evidence, and no post-hoc review by 2026-06-30 in violation of policy.",
+      "latency_s": 5.735
+    },
+    {
+      "id": "T6",
+      "verdict": "Insufficient",
+      "reason": "Vendor SOC 2 explicitly carves out the managed backup subsystem holding all production backups, so it does not cover the critical outsourced function.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Vendor SOC 2 explicitly carves out the managed backup subsystem holding all production backups, so it does not cover the critical outsourced function.",
+      "latency_s": 9.678
+    },
+    {
+      "id": "T7",
+      "verdict": "Insufficient",
+      "reason": "Log exports for Sep 14, 15, and 16 are missing, contradicting attestation of no gaps and failing completeness for Sep 1-30.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Log exports for Sep 14, 15, and 16 are missing, contradicting attestation of no gaps and failing completeness for Sep 1-30.",
+      "latency_s": 4.52
+    },
+    {
+      "id": "T8",
+      "verdict": "Insufficient",
+      "reason": "Sampled login events cite amara.osei and marcus.webb who are absent from the 41-user enforcement report, so full-population MFA coverage is not corroborated.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Sampled login events cite amara.osei and marcus.webb who are absent from the 41-user enforcement report, so full-population MFA coverage is not corroborated.",
+      "latency_s": 11.472
+    },
+    {
+      "id": "T9",
+      "verdict": "Insufficient",
+      "reason": "No restore test record provided for Jul 1-Sep 30; September backup job logs alone prove only successful copies and per policy are not evidence of restorability.",
+      "raw_output": "VERDICT: Insufficient\nREASON: No restore test record provided for Jul 1-Sep 30; September backup job logs alone prove only successful copies and per policy are not evidence of restorability.",
+      "latency_s": 6.191
+    },
+    {
+      "id": "T10",
+      "verdict": null,
+      "reason": "",
+      "raw_output": "(no content)",
+      "latency_s": 15.154
+    },
+    {
+      "id": "T11",
+      "verdict": "Insufficient",
+      "reason": "Type I report covers design suitability as of Nov 15, 2026 only and expressly states no testing or opinion on operating effectiveness over Oct-Dec period.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Type I report covers design suitability as of Nov 15, 2026 only and expressly states no testing or opinion on operating effectiveness over Oct-Dec period.",
+      "latency_s": 4.811
+    },
+    {
+      "id": "T12",
+      "verdict": "Insufficient",
+      "reason": "CHG-5102 was deployed 2026-03-09 before approval 2026-03-10 and CHG-5105 was self-approved by requester S. Patel.",
+      "raw_output": "VERDICT: Insufficient\nREASON: CHG-5102 was deployed 2026-03-09 before approval 2026-03-10 and CHG-5105 was self-approved by requester S. Patel.",
+      "latency_s": 7.278
+    }
+  ]
+}

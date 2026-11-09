@@ -1,0 +1,13 @@
+NorthID IdP configuration export
+Tenant: Copperline Systems, Inc.
+Exported: 2026-08-14 10:22 EDT (within the Q3 2026 observation period)
+
+[mfa]
+tenant_policy = required_for_all_users
+per_group_overrides = none
+exempt_groups = none
+allowed_factors = authenticator_app, hardware_key
+[users]
+workforce_accounts = 41
+mfa_enrolled = 41
+mfa_pending_enrollment = 0

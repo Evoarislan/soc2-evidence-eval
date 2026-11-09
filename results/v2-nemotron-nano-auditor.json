@@ -1,0 +1,97 @@
+{
+  "eval": "SOC 2 Evidence Judgment Eval (micro1 Eval Hackathon)",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "temperature": 0,
+  "mode": "live",
+  "system_prompt_variant": "auditor",
+  "timestamp_utc": "2026-11-08T05:07:29Z",
+  "tasks": [
+    {
+      "id": "T1",
+      "verdict": "Insufficient",
+      "reason": "Contractor exemptions and 3 sign\u2011ins without MFA challenge show MFA is not enforced for all workforce users.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Contractor exemptions and 3 sign\u2011ins without MFA challenge show MFA is not enforced for all workforce users.",
+      "latency_s": 4.162
+    },
+    {
+      "id": "T2",
+      "verdict": "Insufficient",
+      "reason": "No vulnerability scans occurred during the Apr\u202f1\u202f\u2013\u202fJun\u202f30\u202f2026 observation period, so weekly scanning and SLA\u2011compliant remediation cannot be demonstrated.",
+      "raw_output": "VERDICT: Insufficient\nREASON: No vulnerability scans occurred during the Apr\u202f1\u202f\u2013\u202fJun\u202f30\u202f2026 observation period, so weekly scanning and SLA\u2011compliant remediation cannot be demonstrated.",
+      "latency_s": 4.785
+    },
+    {
+      "id": "T3",
+      "verdict": "Insufficient",
+      "reason": "The quarterly review is documented, but the termination list shows Daniel Reyes\u2019 access removal requested on 2026\u201106\u201112 while his IdP account remains active, indicating terminated users were not promptly removed.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The quarterly review is documented, but the termination list shows Daniel Reyes\u2019 access removal requested on 2026\u201106\u201112 while his IdP account remains active, indicating terminated users were not promptly removed.",
+      "latency_s": 17.114
+    },
+    {
+      "id": "T4",
+      "verdict": {
+        "CC6.6": "Sufficient",
+        "CC7.2": "Insufficient"
+      },
+      "reason": "CC6.6 sufficient as all production stores are encrypted with AES\u2011256 and KMS\u2011managed keys, while CC7.2 insufficient because no system monitoring evidence is provided.",
+      "raw_output": "VERDICT_CC6.6: Sufficient\nVERDICT_CC7.2: Insufficient\nREASON: CC6.6 sufficient as all production stores are encrypted with AES\u2011256 and KMS\u2011managed keys, while CC7.2 insufficient because no system monitoring evidence is provided.",
+      "latency_s": 4.662
+    },
+    {
+      "id": "T5",
+      "verdict": "Insufficient",
+      "reason": "Self\u2011approval and missing testing evidence violate the policy.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Self\u2011approval and missing testing evidence violate the policy.",
+      "latency_s": 3.48
+    },
+    {
+      "id": "T6",
+      "verdict": "Sufficient",
+      "reason": "The SOC 2 report\u2019s scope and observation period cover platform monitoring and alerting, meeting the CC9.2 vendor monitoring requirement.",
+      "raw_output": "VERDICT: Sufficient\nREASON: The SOC 2 report\u2019s scope and observation period cover platform monitoring and alerting, meeting the CC9.2 vendor monitoring requirement.",
+      "latency_s": 15.036
+    },
+    {
+      "id": "T7",
+      "verdict": "Insufficient",
+      "reason": "Log files miss several dates (e.g., Sep\u202f14\u201116) within the Sep\u202f1\u201130 period, showing incomplete coverage despite the attestation claim of no gaps.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Log files miss several dates (e.g., Sep\u202f14\u201116) within the Sep\u202f1\u201130 period, showing incomplete coverage despite the attestation claim of no gaps.",
+      "latency_s": 13.405
+    },
+    {
+      "id": "T8",
+      "verdict": "Sufficient",
+      "reason": "All 41 workforce users have MFA enforced with no exemptions, supported by IdP config and sampled login events within the Q3 2026 period.",
+      "raw_output": "VERDICT: Sufficient\nREASON: All 41 workforce users have MFA enforced with no exemptions, supported by IdP config and sampled login events within the Q3 2026 period.",
+      "latency_s": 3.296
+    },
+    {
+      "id": "T9",
+      "verdict": "Insufficient",
+      "reason": "No restore test records for the observation period are provided, only backup job logs.",
+      "raw_output": "VERDICT: Insufficient  \nREASON: No restore test records for the observation period are provided, only backup job logs.",
+      "latency_s": 3.014
+    },
+    {
+      "id": "T10",
+      "verdict": "Sufficient",
+      "reason": "Annual testing in Aug\u202f2025 and Aug\u202f2026 with all findings either remediated or formally accepted with documented compensating controls.",
+      "raw_output": "VERDICT: Sufficient\nREASON: Annual testing in Aug\u202f2025 and Aug\u202f2026 with all findings either remediated or formally accepted with documented compensating controls.",
+      "latency_s": 3.581
+    },
+    {
+      "id": "T11",
+      "verdict": "Insufficient",
+      "reason": "The evidence only attests to the design of logical access controls as of Nov\u202f15\u202f2026 and contains no proof of their operating effectiveness during Oct\u202f1\u2011Dec\u202f31\u202f2026.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The evidence only attests to the design of logical access controls as of Nov\u202f15\u202f2026 and contains no proof of their operating effectiveness during Oct\u202f1\u2011Dec\u202f31\u202f2026.",
+      "latency_s": 2.974
+    },
+    {
+      "id": "T12",
+      "verdict": "Insufficient",
+      "reason": "Production change CHG-5102 was deployed on 2026-03-09 before it was approved on 2026-03-10.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Production change CHG-5102 was deployed on 2026-03-09 before it was approved on 2026-03-10.",
+      "latency_s": 12.152
+    }
+  ]
+}

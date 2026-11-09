@@ -1,0 +1,35 @@
+=====================================================================
+NorthID Admin Console - Single Sign-On Dashboard
+Tenant: Copperline Systems, Inc.          Captured: 2026-05-14 09:41 EDT
+Export type: console screenshot (text capture)
+=====================================================================
+
+[ Organization Security Settings ]
+
+  Multi-Factor Authentication ......... ENABLED  (tenant level)
+  Default authentication policy ....... MFA required at sign-in
+  Session lifetime .................... 12 hours
+  Remember device ..................... 30 days
+
+---------------------------------------------------------------------
+[ Per-Group Policy Assignments ]            (overrides tenant default)
+
+  Group                Members   MFA policy
+  -------------------  -------   ------------------------------
+  Engineering            14      Inherit (MFA required)
+  Operations              9      Inherit (MFA required)
+  Finance                 6      Inherit (MFA required)
+  Sales                   9      Inherit (MFA required)
+  Contractors             3      EXEMPT - MFA not required
+                                 (legacy VPN exception, added 2025-11-02)
+
+---------------------------------------------------------------------
+[ Sign-in summary, last 30 days ]
+
+  Total workforce accounts ............ 41
+  Sign-ins with MFA challenge ......... 38
+  Sign-ins without MFA challenge ...... 3
+
+=====================================================================
+End of capture.
+=====================================================================

@@ -1,0 +1,113 @@
+{
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "score": 10.0,
+  "max_score": 10.0,
+  "score_pct": 100.0,
+  "reason_hits": 8,
+  "reason_units": 11,
+  "reason_hit_rate": 0.727,
+  "per_task": [
+    {
+      "id": "T1",
+      "points": 1.0,
+      "max_points": 1.0,
+      "expected": "Insufficient",
+      "got": "Insufficient",
+      "correct": true,
+      "reason_hit": true
+    },
+    {
+      "id": "T2",
+      "points": 1.0,
+      "max_points": 1.0,
+      "expected": "Insufficient",
+      "got": "Insufficient",
+      "correct": true,
+      "reason_hit": false
+    },
+    {
+      "id": "T3",
+      "points": 1.0,
+      "max_points": 1.0,
+      "expected": "Insufficient",
+      "got": "Insufficient",
+      "correct": true,
+      "reason_hit": true
+    },
+    {
+      "id": "T4",
+      "points": 1.0,
+      "max_points": 1.0,
+      "units": [
+        {
+          "control": "CC6.6",
+          "expected": "Sufficient",
+          "got": "Sufficient",
+          "correct": true,
+          "reason_hit": true
+        },
+        {
+          "control": "CC7.2",
+          "expected": "Insufficient",
+          "got": "Insufficient",
+          "correct": true,
+          "reason_hit": false
+        }
+      ]
+    },
+    {
+      "id": "T5",
+      "points": 1.0,
+      "max_points": 1.0,
+      "expected": "Insufficient",
+      "got": "Insufficient",
+      "correct": true,
+      "reason_hit": false
+    },
+    {
+      "id": "T6",
+      "points": 1.0,
+      "max_points": 1.0,
+      "expected": "Insufficient",
+      "got": "Insufficient",
+      "correct": true,
+      "reason_hit": true
+    },
+    {
+      "id": "T7",
+      "points": 1.0,
+      "max_points": 1.0,
+      "expected": "Insufficient",
+      "got": "Insufficient",
+      "correct": true,
+      "reason_hit": true
+    },
+    {
+      "id": "T8",
+      "points": 1.0,
+      "max_points": 1.0,
+      "expected": "Sufficient",
+      "got": "Sufficient",
+      "correct": true,
+      "reason_hit": true
+    },
+    {
+      "id": "T9",
+      "points": 1.0,
+      "max_points": 1.0,
+      "expected": "Insufficient",
+      "got": "Insufficient",
+      "correct": true,
+      "reason_hit": true
+    },
+    {
+      "id": "T10",
+      "points": 1.0,
+      "max_points": 1.0,
+      "expected": "Sufficient",
+      "got": "Sufficient",
+      "correct": true,
+      "reason_hit": true
+    }
+  ]
+}

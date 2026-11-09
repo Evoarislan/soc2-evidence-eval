@@ -1,0 +1,80 @@
+key len in env: 73
+=== neutral-nemotron-ultra (nvidia/nemotron-3-ultra-550b-a55b:free, prompt=neutral) start 17:23:03
+T1 -> Insufficient
+T2 -> Insufficient
+T3 -> Insufficient
+T4 -> {'CC6.6': 'Sufficient', 'CC7.2': 'Insufficient'}
+T5 -> Insufficient
+T6 -> Insufficient
+T7 -> Insufficient
+T8 -> Sufficient
+T9 -> Insufficient
+T10 -> Sufficient
+Wrote results/neutral-nemotron-ultra.json
+Model: nvidia/nemotron-3-ultra-550b-a55b:free
+Headline score: 10.0 / 10.0 (100.0%)
+Reason-hit rate: 11/11 = 1.000 (diagnostic only)
+  T1: 1.0/1.0  expected Insufficient got Insufficient OK reason-hit=True
+  T2: 1.0/1.0  expected Insufficient got Insufficient OK reason-hit=True
+  T3: 1.0/1.0  expected Insufficient got Insufficient OK reason-hit=True
+  T4: 1.0/1.0  (CC6.6 expected Sufficient got Sufficient OK; CC7.2 expected Insufficient got Insufficient OK)
+  T5: 1.0/1.0  expected Insufficient got Insufficient OK reason-hit=True
+  T6: 1.0/1.0  expected Insufficient got Insufficient OK reason-hit=True
+  T7: 1.0/1.0  expected Insufficient got Insufficient OK reason-hit=True
+  T8: 1.0/1.0  expected Sufficient got Sufficient OK reason-hit=True
+  T9: 1.0/1.0  expected Insufficient got Insufficient OK reason-hit=True
+  T10: 1.0/1.0  expected Sufficient got Sufficient OK reason-hit=True
+Wrote results/neutral-nemotron-ultra.score.json
+=== neutral-nemotron-ultra scored
+=== neutral-nemotron-nano-reasoning (nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free, prompt=neutral) start 17:25:19
+T1 -> Insufficient
+T2 -> Insufficient
+T3 -> Insufficient
+T4 -> {'CC6.6': 'Sufficient', 'CC7.2': 'Insufficient'}
+T5 -> Insufficient
+T6 -> Insufficient
+T7 -> Insufficient
+T8 -> Sufficient
+T9 -> Insufficient
+T10 -> Sufficient
+Wrote results/neutral-nemotron-nano-reasoning.json
+Model: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+Headline score: 10.0 / 10.0 (100.0%)
+Reason-hit rate: 8/11 = 0.727 (diagnostic only)
+  T1: 1.0/1.0  expected Insufficient got Insufficient OK reason-hit=True
+  T2: 1.0/1.0  expected Insufficient got Insufficient OK reason-hit=False
+  T3: 1.0/1.0  expected Insufficient got Insufficient OK reason-hit=True
+  T4: 1.0/1.0  (CC6.6 expected Sufficient got Sufficient OK; CC7.2 expected Insufficient got Insufficient OK)
+  T5: 1.0/1.0  expected Insufficient got Insufficient OK reason-hit=False
+  T6: 1.0/1.0  expected Insufficient got Insufficient OK reason-hit=True
+  T7: 1.0/1.0  expected Insufficient got Insufficient OK reason-hit=True
+  T8: 1.0/1.0  expected Sufficient got Sufficient OK reason-hit=True
+  T9: 1.0/1.0  expected Insufficient got Insufficient OK reason-hit=True
+  T10: 1.0/1.0  expected Sufficient got Sufficient OK reason-hit=True
+Wrote results/neutral-nemotron-nano-reasoning.score.json
+=== neutral-nemotron-nano-reasoning scored
+=== live-gemma-4-31b (google/gemma-4-31b-it:free, prompt=auditor) start 17:26:12
+Traceback (most recent call last):
+  File "/home/hatch/workspace/survival/micro1-entry/build/run_eval.py", line 271, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/hatch/workspace/survival/micro1-entry/build/run_eval.py", line 248, in main
+    raw = call_model(config, prompt,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/survival/micro1-entry/build/run_eval.py", line 197, in call_model
+    raise RuntimeError("endpoint call failed after 5 attempts: %r" % (last_exc,))
+RuntimeError: endpoint call failed after 5 attempts: RuntimeError('HTTP 429: {"error": {"message": "Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day", "code": 429, "metadata": {"headers": {"X-RateLimit-Limit": "50", "X-RateLimit-Remaining": "0", "X-RateLimit-Reset": "1793923200000"}, "limit_source": "openrouter_free_tier_dai')
+=== live-gemma-4-31b RUN FAILED
+=== live-gemma-4-26b (google/gemma-4-26b-a4b-it:free, prompt=auditor) start 17:27:38
+Traceback (most recent call last):
+  File "/home/hatch/workspace/survival/micro1-entry/build/run_eval.py", line 271, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/hatch/workspace/survival/micro1-entry/build/run_eval.py", line 248, in main
+    raw = call_model(config, prompt,
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/hatch/workspace/survival/micro1-entry/build/run_eval.py", line 197, in call_model
+    raise RuntimeError("endpoint call failed after 5 attempts: %r" % (last_exc,))
+RuntimeError: endpoint call failed after 5 attempts: RuntimeError('HTTP 429: {"error": {"message": "Rate limit exceeded: free-models-per-day. Add 10 credits to unlock 1000 free model requests per day", "code": 429, "metadata": {"headers": {"X-RateLimit-Limit": "50", "X-RateLimit-Remaining": "0", "X-RateLimit-Reset": "1793923200000"}, "limit_source": "openrouter_free_tier_dai')
+=== live-gemma-4-26b RUN FAILED
+ALL DONE

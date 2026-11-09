@@ -1,0 +1,7 @@
+change_id,title,requester,submitted_at,approver,approved_at,decision
+CHG-5101,Database index rebuild for orders table,M. Chen,2026-02-03 09:12,L. Fischer,2026-02-03 10:15,Approved
+CHG-5102,API gateway rate-limit configuration,R. Alvarez,2026-03-09 15:26,L. Fischer,2026-03-10 09:00,Approved
+CHG-5103,TLS certificate rotation - customer portal,T. Nguyen,2026-01-20 10:02,J. Okafor,2026-01-20 11:30,Approved
+CHG-5104,Payments v2 feature flag rollout,S. Patel,2026-02-18 13:40,M. Chen,2026-02-18 15:45,Approved
+CHG-5105,Billing webhook retry hotfix,S. Patel,2026-03-22 12:48,S. Patel,2026-03-22 13:05,Approved
+CHG-5106,OS patching - application servers,D. Reyes,2026-03-27 08:55,L. Fischer,2026-03-27 09:40,Approved

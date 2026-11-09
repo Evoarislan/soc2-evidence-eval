@@ -1,0 +1,6 @@
+scan_id,scan_date,scope,critical,high,status
+VS-1041,2026-01-13,external perimeter,0,1,complete
+VS-1052,2026-02-03,external perimeter,0,0,complete
+VS-1063,2026-02-24,external perimeter,0,0,complete
+VS-1070,2026-03-03,external perimeter,0,0,complete
+VS-1119,2026-07-08,external perimeter,0,2,complete

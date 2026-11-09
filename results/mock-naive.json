@@ -1,0 +1,97 @@
+{
+  "eval": "SOC 2 Evidence Judgment Eval (micro1 Eval Hackathon)",
+  "model": "mock:naive",
+  "temperature": 0,
+  "mode": "mock",
+  "system_prompt_variant": null,
+  "timestamp_utc": "2026-11-05T17:33:32Z",
+  "tasks": [
+    {
+      "id": "T1",
+      "verdict": "Sufficient",
+      "reason": "The dashboard screenshot clearly shows MFA enabled for the organization, which demonstrates the control is operating.",
+      "raw_output": "VERDICT: Sufficient\nREASON: The dashboard screenshot clearly shows MFA enabled for the organization, which demonstrates the control is operating.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T2",
+      "verdict": "Sufficient",
+      "reason": "A clean vulnerability scan report with zero critical or high findings shows scanning is performed and issues are handled.",
+      "raw_output": "VERDICT: Sufficient\nREASON: A clean vulnerability scan report with zero critical or high findings shows scanning is performed and issues are handled.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T3",
+      "verdict": "Sufficient",
+      "reason": "The quarterly access review is signed off as complete for all users, indicating access is reviewed on schedule.",
+      "raw_output": "VERDICT: Sufficient\nREASON: The quarterly access review is signed off as complete for all users, indicating access is reviewed on schedule.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T4",
+      "verdict": {
+        "CC6.6": "Sufficient",
+        "CC7.2": "Sufficient"
+      },
+      "reason": "The report confirms strong AES-256 encryption with managed keys, a solid security control that supports the claims.",
+      "raw_output": "VERDICT_CC6.6: Sufficient\nVERDICT_CC7.2: Sufficient\nREASON: The report confirms strong AES-256 encryption with managed keys, a solid security control that supports the claims.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T5",
+      "verdict": "Sufficient",
+      "reason": "The change ticket shows an approved status and was deployed to production, so the change process was followed.",
+      "raw_output": "VERDICT: Sufficient\nREASON: The change ticket shows an approved status and was deployed to production, so the change process was followed.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T6",
+      "verdict": "Sufficient",
+      "reason": "The vendor holds a clean SOC 2 Type II opinion covering a full year, which provides strong assurance over the vendor.",
+      "raw_output": "VERDICT: Sufficient\nREASON: The vendor holds a clean SOC 2 Type II opinion covering a full year, which provides strong assurance over the vendor.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T7",
+      "verdict": "Sufficient",
+      "reason": "The administrator attests that logs are retained for 90 days with no gaps, and daily log exports are provided.",
+      "raw_output": "VERDICT: Sufficient\nREASON: The administrator attests that logs are retained for 90 days with no gaps, and daily log exports are provided.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T8",
+      "verdict": "Sufficient",
+      "reason": "The enforcement report shows MFA required for the workforce and sampled logins confirm users are challenged.",
+      "raw_output": "VERDICT: Sufficient\nREASON: The enforcement report shows MFA required for the workforce and sampled logins confirm users are challenged.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T9",
+      "verdict": "Sufficient",
+      "reason": "Thirty consecutive days of backups completed with a Success status and no failures, showing a reliable backup process that protects the production database.",
+      "raw_output": "VERDICT: Sufficient\nREASON: Thirty consecutive days of backups completed with a Success status and no failures, showing a reliable backup process that protects the production database.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T10",
+      "verdict": "Sufficient",
+      "reason": "The penetration test was performed recently by an outside firm covering production, and the report presents a strong overall security posture.",
+      "raw_output": "VERDICT: Sufficient\nREASON: The penetration test was performed recently by an outside firm covering production, and the report presents a strong overall security posture.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T11",
+      "verdict": "Sufficient",
+      "reason": "The company holds a SOC 2 report with a clean opinion from an independent CPA firm covering its logical access controls, which provides strong assurance over the period.",
+      "raw_output": "VERDICT: Sufficient\nREASON: The company holds a SOC 2 report with a clean opinion from an independent CPA firm covering its logical access controls, which provides strong assurance over the period.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T12",
+      "verdict": "Sufficient",
+      "reason": "Every change in the quarter has a recorded approval and a successful production deployment, showing the change approval process was followed.",
+      "raw_output": "VERDICT: Sufficient\nREASON: Every change in the quarter has a recorded approval and a successful production deployment, showing the change approval process was followed.",
+      "latency_s": 0.0
+    }
+  ]
+}

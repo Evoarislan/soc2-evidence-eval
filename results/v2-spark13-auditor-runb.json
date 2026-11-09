@@ -1,0 +1,97 @@
+{
+  "eval": "SOC 2 Evidence Judgment Eval (micro1 Eval Hackathon)",
+  "model": "meta-api:muse-spark-1.3",
+  "temperature": 0,
+  "mode": "live",
+  "system_prompt_variant": "auditor",
+  "timestamp_utc": "2026-11-05T18:40:53Z",
+  "tasks": [
+    {
+      "id": "T1",
+      "verdict": "Insufficient",
+      "reason": "Evidence shows 3 Contractor workforce users explicitly exempt from MFA with sign-ins without MFA challenge, contradicting enforcement for all.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Evidence shows 3 Contractor workforce users explicitly exempt from MFA with sign-ins without MFA challenge, contradicting enforcement for all.",
+      "latency_s": 7.531
+    },
+    {
+      "id": "T2",
+      "verdict": "Insufficient",
+      "reason": "No scans dated within Apr 1-Jun 30 period (gap from Mar 3 to Jul 8) fails weekly requirement and one ticket SEC-2213 took 59 days exceeding 30-day SLA.",
+      "raw_output": "VERDICT: Insufficient\nREASON: No scans dated within Apr 1-Jun 30 period (gap from Mar 3 to Jul 8) fails weekly requirement and one ticket SEC-2213 took 59 days exceeding 30-day SLA.",
+      "latency_s": 8.309
+    },
+    {
+      "id": "T3",
+      "verdict": "Insufficient",
+      "reason": "HR shows Daniel Reyes terminated 2026-06-12 but 2026-06-30 IdP export shows account still Active with login 2026-06-29, proving prompt removal failed.",
+      "raw_output": "VERDICT: Insufficient\nREASON: HR shows Daniel Reyes terminated 2026-06-12 but 2026-06-30 IdP export shows account still Active with login 2026-06-29, proving prompt removal failed.",
+      "latency_s": 7.332
+    },
+    {
+      "id": "T4",
+      "verdict": {
+        "CC6.6": "Sufficient",
+        "CC7.2": "Insufficient"
+      },
+      "reason": "Report proves AES-256 KMS encryption on all prod stores for CC6.6 but provides no system monitoring/anomaly-detection evidence for CC7.2.",
+      "raw_output": "VERDICT_CC6.6: Sufficient\nVERDICT_CC7.2: Insufficient\nREASON: Report proves AES-256 KMS encryption on all prod stores for CC6.6 but provides no system monitoring/anomaly-detection evidence for CC7.2.",
+      "latency_s": 13.512
+    },
+    {
+      "id": "T5",
+      "verdict": "Insufficient",
+      "reason": "Ticket CHG-4417 shows self-approval by requester, no testing evidence, and no post-hoc review as of 2026-06-30, violating policy.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Ticket CHG-4417 shows self-approval by requester, no testing evidence, and no post-hoc review as of 2026-06-30, violating policy.",
+      "latency_s": 7.408
+    },
+    {
+      "id": "T6",
+      "verdict": "Insufficient",
+      "reason": "Vendor SOC 2 explicitly carves out the managed backup subsystem holding all production backups, so it does not cover the relied-upon service.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Vendor SOC 2 explicitly carves out the managed backup subsystem holding all production backups, so it does not cover the relied-upon service.",
+      "latency_s": 8.679
+    },
+    {
+      "id": "T7",
+      "verdict": "Insufficient",
+      "reason": "Log exports for Sep 14, 15, and 16 are missing, contradicting attestation of no gaps and failing completeness for Sep 1-30 period.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Log exports for Sep 14, 15, and 16 are missing, contradicting attestation of no gaps and failing completeness for Sep 1-30 period.",
+      "latency_s": 5.357
+    },
+    {
+      "id": "T8",
+      "verdict": "Sufficient",
+      "reason": "Full 41/41 workforce population shows MFA enforced with no exemptions, corroborated by in-period IdP config and successful MFA login events.",
+      "raw_output": "VERDICT: Sufficient\nREASON: Full 41/41 workforce population shows MFA enforced with no exemptions, corroborated by in-period IdP config and successful MFA login events.",
+      "latency_s": 17.052
+    },
+    {
+      "id": "T9",
+      "verdict": "Insufficient",
+      "reason": "No restore test record provided for Jul 1-Sep 30; September backup job success logs alone do not prove restorability per policy and do not cover full period.",
+      "raw_output": "VERDICT: Insufficient\nREASON: No restore test record provided for Jul 1-Sep 30; September backup job success logs alone do not prove restorability per policy and do not cover full period.",
+      "latency_s": 6.892
+    },
+    {
+      "id": "T10",
+      "verdict": "Sufficient",
+      "reason": "Annual independent test of production completed Aug 2026 with critical remediated and retested 2026-08-28 and mediums formally risk-accepted by CISO with compensating controls and expiry/retest date.",
+      "raw_output": "VERDICT: Sufficient\nREASON: Annual independent test of production completed Aug 2026 with critical remediated and retested 2026-08-28 and mediums formally risk-accepted by CISO with compensating controls and expiry/retest date.",
+      "latency_s": 18.869
+    },
+    {
+      "id": "T11",
+      "verdict": "Insufficient",
+      "reason": "Type I report attests only to design suitability as of Nov 15, 2026, not operating effectiveness throughout Oct 1-Dec 31, 2026.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Type I report attests only to design suitability as of Nov 15, 2026, not operating effectiveness throughout Oct 1-Dec 31, 2026.",
+      "latency_s": 5.183
+    },
+    {
+      "id": "T12",
+      "verdict": "Insufficient",
+      "reason": "CHG-5102 deployed 2026-03-09 22:40 before approval 2026-03-10 09:00 and CHG-5105 was self-approved by requester.",
+      "raw_output": "VERDICT: Insufficient\nREASON: CHG-5102 deployed 2026-03-09 22:40 before approval 2026-03-10 09:00 and CHG-5105 was self-approved by requester.",
+      "latency_s": 7.518
+    }
+  ]
+}

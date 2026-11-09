@@ -1,0 +1,97 @@
+{
+  "eval": "SOC 2 Evidence Judgment Eval (micro1 Eval Hackathon)",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "temperature": 0,
+  "mode": "live",
+  "system_prompt_variant": "auditor",
+  "timestamp_utc": "2026-11-08T05:03:42Z",
+  "tasks": [
+    {
+      "id": "T1",
+      "verdict": "Insufficient",
+      "reason": "Contractors group (3 users) explicitly exempt from MFA per group policy, contradicting claim that MFA enforced for all workforce users.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Contractors group (3 users) explicitly exempt from MFA per group policy, contradicting claim that MFA enforced for all workforce users.",
+      "latency_s": 9.667
+    },
+    {
+      "id": "T2",
+      "verdict": "Insufficient",
+      "reason": "No vulnerability scans occurred during the observation period (Apr 1\u2013Jun 30, 2026); scan history shows last scan 2026-03-03 and next 2026-07-08, contradicting weekly scanning claim.",
+      "raw_output": "VERDICT: Insufficient\nREASON: No vulnerability scans occurred during the observation period (Apr 1\u2013Jun 30, 2026); scan history shows last scan 2026-03-03 and next 2026-07-08, contradicting weekly scanning claim.",
+      "latency_s": 10.581
+    },
+    {
+      "id": "T3",
+      "verdict": "Insufficient",
+      "reason": "The Q2 2026 access review (completed 2026-06-10) predates the Daniel Reyes termination (2026-06-12), and the IdP export (2026-06-30) shows his account still Active with last_login 2026-06-29, contradicting the claim that terminated users are removed promptly.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The Q2 2026 access review (completed 2026-06-10) predates the Daniel Reyes termination (2026-06-12), and the IdP export (2026-06-30) shows his account still Active with last_login 2026-06-29, contradicting the claim that terminated users are removed promptly.",
+      "latency_s": 10.597
+    },
+    {
+      "id": "T4",
+      "verdict": {
+        "CC6.6": "Sufficient",
+        "CC7.2": "Insufficient"
+      },
+      "reason": "The encryption configuration report confirms AES-256 encryption with managed KMS across all production data stores, satisfying CC6.6, but contains no evidence of system monitoring or anomaly detection capabilities required for CC7.2.",
+      "raw_output": "VERDICT_CC6.6: Sufficient\nVERDICT_CC7.2: Insufficient\nREASON: The encryption configuration report confirms AES-256 encryption with managed KMS across all production data stores, satisfying CC6.6, but contains no evidence of system monitoring or anomaly detection capabilities required for CC7.2.",
+      "latency_s": 7.179
+    },
+    {
+      "id": "T5",
+      "verdict": "Insufficient",
+      "reason": "Change ticket CHG-4417 shows self-approval by requester, no testing evidence attached, and no post-hoc review within 5 business days, violating policy requirements for emergency changes.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Change ticket CHG-4417 shows self-approval by requester, no testing evidence attached, and no post-hoc review within 5 business days, violating policy requirements for emergency changes.",
+      "latency_s": 6.987
+    },
+    {
+      "id": "T6",
+      "verdict": "Insufficient",
+      "reason": "The SOC 2 report explicitly carves out the managed backup subsystem where Copperline's production backups reside, and the ISO 27001 certificate does not cover individual subsystems; thus vendor monitoring of the critical backup service is not covered.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The SOC 2 report explicitly carves out the managed backup subsystem where Copperline's production backups reside, and the ISO 27001 certificate does not cover individual subsystems; thus vendor monitoring of the critical backup service is not covered.",
+      "latency_s": 10.857
+    },
+    {
+      "id": "T7",
+      "verdict": "Insufficient",
+      "reason": "The administrator attestation claims no gaps in the log sequence for Sep 1-30, 2026, but the provided log files are missing exports for September 14, 15, and 16 (only 27 of 30 days present), contradicting the attestation and failing to demonstrate completeness for the full observation period.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The administrator attestation claims no gaps in the log sequence for Sep 1-30, 2026, but the provided log files are missing exports for September 14, 15, and 16 (only 27 of 30 days present), contradicting the attestation and failing to demonstrate completeness for the full observation period.",
+      "latency_s": 6.548
+    },
+    {
+      "id": "T8",
+      "verdict": "Sufficient",
+      "reason": "Evidence shows MFA policy required for all 41 workforce users with no exemptions, configuration export confirms tenant-wide enforcement during period, and sampled login events corroborate active MFA challenges within observation window.",
+      "raw_output": "VERDICT: Sufficient\nREASON: Evidence shows MFA policy required for all 41 workforce users with no exemptions, configuration export confirms tenant-wide enforcement during period, and sampled login events corroborate active MFA challenges within observation window.",
+      "latency_s": 13.57
+    },
+    {
+      "id": "T9",
+      "verdict": "Insufficient",
+      "reason": "Evidence only shows backup job completion logs, not documented restore test records required by policy to verify restorability.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Evidence only shows backup job completion logs, not documented restore test records required by policy to verify restorability.",
+      "latency_s": 5.693
+    },
+    {
+      "id": "T10",
+      "verdict": "Sufficient",
+      "reason": "Annual penetration test performed (Aug 2026, prior Aug 2025), critical finding remediated and retested, medium findings formally risk-accepted by CISO with compensating controls and scheduled retest, lower findings tracked for remediation.",
+      "raw_output": "VERDICT: Sufficient\nREASON: Annual penetration test performed (Aug 2026, prior Aug 2025), critical finding remediated and retested, medium findings formally risk-accepted by CISO with compensating controls and scheduled retest, lower findings tracked for remediation.",
+      "latency_s": 10.064
+    },
+    {
+      "id": "T11",
+      "verdict": "Insufficient",
+      "reason": "The evidence is a SOC 2 Type I report which only evaluates control design as of November 15, 2026, and explicitly states it does not evaluate operating effectiveness over any period.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The evidence is a SOC 2 Type I report which only evaluates control design as of November 15, 2026, and explicitly states it does not evaluate operating effectiveness over any period.",
+      "latency_s": 4.419
+    },
+    {
+      "id": "T12",
+      "verdict": "Insufficient",
+      "reason": "CHG-5102 was deployed to production on 2026-03-09 22:40 before its approval on 2026-03-10 09:00, contradicting the claim that all production changes were approved before deployment.",
+      "raw_output": "VERDICT: Insufficient\nREASON: CHG-5102 was deployed to production on 2026-03-09 22:40 before its approval on 2026-03-10 09:00, contradicting the claim that all production changes were approved before deployment.",
+      "latency_s": 24.193
+    }
+  ]
+}

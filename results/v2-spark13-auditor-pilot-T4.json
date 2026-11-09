@@ -1,0 +1,20 @@
+{
+  "eval": "SOC 2 Evidence Judgment Eval (micro1 Eval Hackathon)",
+  "model": "meta-api:muse-spark-1.3",
+  "temperature": 0,
+  "mode": "live",
+  "system_prompt_variant": "auditor",
+  "timestamp_utc": "2026-11-05T18:40:12Z",
+  "tasks": [
+    {
+      "id": "T4",
+      "verdict": {
+        "CC6.6": "Sufficient",
+        "CC7.2": "Insufficient"
+      },
+      "reason": "Report shows AES-256 KMS encryption enabled for all prod stores but contains no monitoring/anomaly-detection evidence.",
+      "raw_output": "VERDICT_CC6.6: Sufficient\nVERDICT_CC7.2: Insufficient\nREASON: Report shows AES-256 KMS encryption enabled for all prod stores but contains no monitoring/anomaly-detection evidence.",
+      "latency_s": 12.888
+    }
+  ]
+}

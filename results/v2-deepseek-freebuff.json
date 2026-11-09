@@ -1,0 +1,97 @@
+{
+  "eval": "SOC 2 Evidence Judgment Eval",
+  "model": "freebuff:deepseek-v4.1-flash-slow",
+  "temperature": 0,
+  "mode": "chat-ui (no system prompt)",
+  "system_prompt_variant": null,
+  "timestamp_utc": "2026-11-05T18:04:38Z",
+  "tasks": [
+    {
+      "id": "T1",
+      "verdict": "Insufficient",
+      "reason": "Tenant default requires MFA, but the Contractors group (3 of 41 workforce accounts) is explicitly exempt from MFA and 3 sign-ins in the last 30 days had no MFA challenge, so enforcement does not cover all workforce users.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Tenant default requires MFA, but the Contractors group (3 of 41 workforce accounts) is explicitly exempt from MFA and 3 sign-ins in the last 30 days had no MFA challenge, so enforcement does not cover all workforce users.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T2",
+      "verdict": "Insufficient",
+      "reason": "No scans fall inside the Apr 1 - Jun 30, 2026 observation period (last scan 2026-03-03, next 2026-07-08), and the recorded cadence is roughly monthly rather than weekly, so neither weekly scanning nor in-window SLA remediation is evidenced.",
+      "raw_output": "VERDICT: Insufficient\nREASON: No scans fall inside the Apr 1 - Jun 30, 2026 observation period (last scan 2026-03-03, next 2026-07-08), and the recorded cadence is roughly monthly rather than weekly, so neither weekly scanning nor in-window SLA remediation is evidenced.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T3",
+      "verdict": "Insufficient",
+      "reason": "Daniel Reyes, terminated 2026-06-12, is still an Active IdP account with a 2026-06-29 login in the 2026-06-30 export, so terminated-user removal was not prompt and the review attestation is contradicted.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Daniel Reyes, terminated 2026-06-12, is still an Active IdP account with a 2026-06-29 login in the 2026-06-30 export, so terminated-user removal was not prompt and the review attestation is contradicted.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T4",
+      "verdict": {
+        "CC6.6": "Sufficient",
+        "CC7.2": "Insufficient"
+      },
+      "reason": "The configuration export documents AES-256 at rest with managed KMS keys and rotation across all six production data stores, but no monitoring, alerting, or anomaly-detection evidence was provided at all, so CC7.2 is unevidenced.",
+      "raw_output": "VERDICT_CC6.6: Sufficient\nVERDICT_CC7.2: Insufficient\nREASON: The configuration export documents AES-256 at rest with managed KMS keys and rotation across all six production data stores, but no monitoring, alerting, or anomaly-detection evidence was provided at all, so CC7.2 is unevidenced.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T5",
+      "verdict": "Insufficient",
+      "reason": "CHG-4417 was self-approved by the requester three minutes after creation in violation of the peer-approval rule, carries no testing evidence, and its \"emergency\" flag is unsupported (intermittent 401s, not an outage) with no post-hoc review recorded over a month later.",
+      "raw_output": "VERDICT: Insufficient\nREASON: CHG-4417 was self-approved by the requester three minutes after creation in violation of the peer-approval rule, carries no testing evidence, and its \"emergency\" flag is unsupported (intermittent 401s, not an outage) with no post-hoc review recorded over a month later.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T6",
+      "verdict": "Insufficient",
+      "reason": "The SOC 2 report explicitly carves out VaultKeep's managed backup subsystem \u2014 where all of Copperline's production backups reside \u2014 with no opinion expressed on that subservice organization, the ISO certificate disclaims coverage of individual services, and the report's complementary user entity controls (independent backup-completion monitoring and restore verification) have no supporting evidence.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The SOC 2 report explicitly carves out VaultKeep's managed backup subsystem \u2014 where all of Copperline's production backups reside \u2014 with no opinion expressed on that subservice organization, the ISO certificate disclaims coverage of individual services, and the report's complementary user entity controls (independent backup-completion monitoring and restore verification) have no supporting evidence.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T7",
+      "verdict": "Insufficient",
+      "reason": "No exports exist for September 14-16, 2026 (the files jump from 09-13 to 09-17), so the log record for the observation period has a three-day gap that directly contradicts the administrator's attestation that daily exports are complete with no sequence gaps.",
+      "raw_output": "VERDICT: Insufficient\nREASON: No exports exist for September 14-16, 2026 (the files jump from 09-13 to 09-17), so the log record for the observation period has a three-day gap that directly contradicts the administrator's attestation that daily exports are complete with no sequence gaps.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T8",
+      "verdict": "Sufficient",
+      "reason": "A mid-period IdP configuration export (2026-08-14) shows tenant_policy = required_for_all_users with no per-group exemptions and 41 of 41 accounts enrolled, the per-user detail confirms Enforced for every workforce account including all contractors, and the prior Q2 contractor exemption is documented as removed on 2026-06-28.",
+      "raw_output": "VERDICT: Sufficient\nREASON: A mid-period IdP configuration export (2026-08-14) shows tenant_policy = required_for_all_users with no per-group exemptions and 41 of 41 accounts enrolled, the per-user detail confirms Enforced for every workforce account including all contractors, and the prior Q2 contractor exemption is documented as removed on 2026-06-28.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T9",
+      "verdict": "Insufficient",
+      "reason": "The only evidence is September backup job completion logs for a single target (prod-db-01), and no restore test record exists for the Jul 1 - Sep 30, 2026 period \u2014 which the policy itself states is the required audit evidence of restorability, since job completion only proves data was copied.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The only evidence is September backup job completion logs for a single target (prod-db-01), and no restore test record exists for the Jul 1 - Sep 30, 2026 period \u2014 which the policy itself states is the required audit evidence of restorability, since job completion only proves data was copied.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T10",
+      "verdict": "Sufficient",
+      "reason": "An independent third-party test was performed in August 2026, consistent with the August 2025 annual cadence, the single critical finding was remediated and independently retested as closed on 2026-08-28, and both medium findings carry written CISO risk acceptance with named compensating controls, expiry, and scheduled retest dates.",
+      "raw_output": "VERDICT: Sufficient\nREASON: An independent third-party test was performed in August 2026, consistent with the August 2025 annual cadence, the single critical finding was remediated and independently retested as closed on 2026-08-28, and both medium findings carry written CISO risk acceptance with named compensating controls, expiry, and scheduled retest dates.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T11",
+      "verdict": "Insufficient",
+      "reason": "A SOC 2 Type I report addresses only whether controls were suitably designed as of a single date (November 15, 2026) and explicitly expresses no opinion on operating effectiveness over any period, so it cannot evidence that logical access controls operated effectively across Oct 1 - Dec 31, 2026.",
+      "raw_output": "VERDICT: Insufficient\nREASON: A SOC 2 Type I report addresses only whether controls were suitably designed as of a single date (November 15, 2026) and explicitly expresses no opinion on operating effectiveness over any period, so it cannot evidence that logical access controls operated effectively across Oct 1 - Dec 31, 2026.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T12",
+      "verdict": "Insufficient",
+      "reason": "CHG-5102 was deployed to production on 2026-03-09 22:40 but only approved the next morning at 2026-03-10 09:00, so at least one Q1 2026 production change went live without prior approval (and CHG-5105 was additionally self-approved by its own requester).",
+      "raw_output": "VERDICT: Insufficient\nREASON: CHG-5102 was deployed to production on 2026-03-09 22:40 but only approved the next morning at 2026-03-10 09:00, so at least one Q1 2026 production change went live without prior approval (and CHG-5105 was additionally self-approved by its own requester).",
+      "latency_s": 0.0
+    }
+  ]
+}

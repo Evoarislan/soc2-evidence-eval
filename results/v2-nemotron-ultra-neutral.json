@@ -1,0 +1,97 @@
+{
+  "eval": "SOC 2 Evidence Judgment Eval (micro1 Eval Hackathon)",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "temperature": 0,
+  "mode": "live",
+  "system_prompt_variant": "neutral",
+  "timestamp_utc": "2026-11-08T05:05:43Z",
+  "tasks": [
+    {
+      "id": "T1",
+      "verdict": "Insufficient",
+      "reason": "Contractors group (3 users) is exempt from MFA per group policy, so MFA is not enforced for all workforce users.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Contractors group (3 users) is exempt from MFA per group policy, so MFA is not enforced for all workforce users.",
+      "latency_s": 6.488
+    },
+    {
+      "id": "T2",
+      "verdict": "Insufficient",
+      "reason": "No vulnerability scans occurred during the observation period (Apr 1 - Jun 30, 2026); scan history shows last scan 2026-03-03 and next scan 2026-07-08, contradicting weekly scanning requirement.",
+      "raw_output": "VERDICT: Insufficient\nREASON: No vulnerability scans occurred during the observation period (Apr 1 - Jun 30, 2026); scan history shows last scan 2026-03-03 and next scan 2026-07-08, contradicting weekly scanning requirement.",
+      "latency_s": 7.427
+    },
+    {
+      "id": "T3",
+      "verdict": "Insufficient",
+      "reason": "Terminated user Daniel Reyes remained active in IdP 18 days after termination effective date, contradicting prompt removal claim.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Terminated user Daniel Reyes remained active in IdP 18 days after termination effective date, contradicting prompt removal claim.",
+      "latency_s": 10.095
+    },
+    {
+      "id": "T4",
+      "verdict": {
+        "CC6.6": "Sufficient",
+        "CC7.2": "Insufficient"
+      },
+      "reason": "The encryption-at-rest report confirms all production data stores use AES-256 with managed KMS and key rotation, satisfying CC6.6, but no evidence of system monitoring or anomaly detection is provided for CC7.2.",
+      "raw_output": "VERDICT_CC6.6: Sufficient\nVERDICT_CC7.2: Insufficient\nREASON: The encryption-at-rest report confirms all production data stores use AES-256 with managed KMS and key rotation, satisfying CC6.6, but no evidence of system monitoring or anomaly detection is provided for CC7.2.",
+      "latency_s": 3.805
+    },
+    {
+      "id": "T5",
+      "verdict": "Insufficient",
+      "reason": "The change ticket shows self-approval by requester, no testing evidence attached, and no post-hoc review within 5 business days for an emergency change, violating multiple policy requirements.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The change ticket shows self-approval by requester, no testing evidence attached, and no post-hoc review within 5 business days for an emergency change, violating multiple policy requirements.",
+      "latency_s": 5.316
+    },
+    {
+      "id": "T6",
+      "verdict": "Insufficient",
+      "reason": "The SOC 2 report explicitly carves out the managed backup subsystem (operated by a subservice organization) which is where Copperline's production backups reside per the data flow note.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The SOC 2 report explicitly carves out the managed backup subsystem (operated by a subservice organization) which is where Copperline's production backups reside per the data flow note.",
+      "latency_s": 10.654
+    },
+    {
+      "id": "T7",
+      "verdict": "Insufficient",
+      "reason": "Missing audit log exports for 2026-09-14, 2026-09-15, and 2026-09-16; attestation claims no gaps but evidence shows 3-day gap.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Missing audit log exports for 2026-09-14, 2026-09-15, and 2026-09-16; attestation claims no gaps but evidence shows 3-day gap.",
+      "latency_s": 14.009
+    },
+    {
+      "id": "T8",
+      "verdict": "Sufficient",
+      "reason": "IdP configuration shows MFA required for all users with no exemptions, enrollment report confirms all 41 workforce accounts have MFA enforced, and sampled login events within the period demonstrate successful MFA challenges.",
+      "raw_output": "VERDICT: Sufficient\nREASON: IdP configuration shows MFA required for all users with no exemptions, enrollment report confirms all 41 workforce accounts have MFA enforced, and sampled login events within the period demonstrate successful MFA challenges.",
+      "latency_s": 9.884
+    },
+    {
+      "id": "T9",
+      "verdict": "Insufficient",
+      "reason": "No restore test records provided for the observation period; backup job logs only show successful copies, not verified restorability as required by policy.",
+      "raw_output": "VERDICT: Insufficient\nREASON: No restore test records provided for the observation period; backup job logs only show successful copies, not verified restorability as required by policy.",
+      "latency_s": 5.864
+    },
+    {
+      "id": "T10",
+      "verdict": "Sufficient",
+      "reason": "Annual penetration testing performed (Aug 2025 and Aug 2026) with critical finding remediated and retested, medium findings formally risk-accepted by CISO with compensating controls and scheduled retests, and low/informational findings tracked with target dates.",
+      "raw_output": "VERDICT: Sufficient\nREASON: Annual penetration testing performed (Aug 2025 and Aug 2026) with critical finding remediated and retested, medium findings formally risk-accepted by CISO with compensating controls and scheduled retests, and low/informational findings tracked with target dates.",
+      "latency_s": 8.355
+    },
+    {
+      "id": "T11",
+      "verdict": "Insufficient",
+      "reason": "The evidence is a SOC 2 Type I report which only evaluates control design as of a single point in time (Nov 15, 2026), not operating effectiveness over the period Oct 1 - Dec 31, 2026.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The evidence is a SOC 2 Type I report which only evaluates control design as of a single point in time (Nov 15, 2026), not operating effectiveness over the period Oct 1 - Dec 31, 2026.",
+      "latency_s": 6.788
+    },
+    {
+      "id": "T12",
+      "verdict": "Insufficient",
+      "reason": "CHG-5102 was deployed on 2026-03-09 22:40 before its approval on 2026-03-10 09:00.",
+      "raw_output": "VERDICT: Insufficient\nREASON: CHG-5102 was deployed on 2026-03-09 22:40 before its approval on 2026-03-10 09:00.",
+      "latency_s": 17.72
+    }
+  ]
+}

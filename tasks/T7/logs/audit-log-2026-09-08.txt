@@ -1,0 +1,8 @@
+# Audit log export - Copperline production platform
+# Date: 2026-09-08 (00:00-23:59 EDT)
+# Events: 4416
+2026-09-08T00:00:04Z system log-rotation complete
+2026-09-08T08:18:22Z user.login.success user=ops.admin source=10.4.1.8
+2026-09-08T11:42:10Z config.change id=cfg-9008 actor=svc-deploy
+2026-09-08T17:03:55Z user.logout user=ops.admin
+2026-09-08T23:59:59Z export.checksum sha256:ok

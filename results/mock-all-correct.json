@@ -1,0 +1,97 @@
+{
+  "eval": "SOC 2 Evidence Judgment Eval (micro1 Eval Hackathon)",
+  "model": "mock:all-correct",
+  "temperature": 0,
+  "mode": "mock",
+  "system_prompt_variant": null,
+  "timestamp_utc": "2026-11-05T17:33:32Z",
+  "tasks": [
+    {
+      "id": "T1",
+      "verdict": "Insufficient",
+      "reason": "The tenant MFA toggle is on, but the group policy exempts the Contractors group and 3 of the 41 sampled users are contractors, so enforcement is not org-wide.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The tenant MFA toggle is on, but the group policy exempts the Contractors group and 3 of the 41 sampled users are contractors, so enforcement is not org-wide.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T2",
+      "verdict": "Insufficient",
+      "reason": "The only clean report is dated Mar 3, outside the period; the scan history shows no in-period scans between Apr 1 and Jun 30 and the next scan is Jul 8, after period end.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The only clean report is dated Mar 3, outside the period; the scan history shows no in-period scans between Apr 1 and Jun 30 and the next scan is Jul 8, after period end.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T3",
+      "verdict": "Insufficient",
+      "reason": "The user terminated on Jun 12 is still active in the IdP on Jun 30, 18 days later, and the review sign-off predates the termination and covers a stale population of 38 while the IdP lists 39 active accounts.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The user terminated on Jun 12 is still active in the IdP on Jun 30, 18 days later, and the review sign-off predates the termination and covers a stale population of 38 while the IdP lists 39 active accounts.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T4",
+      "verdict": {
+        "CC6.6": "Sufficient",
+        "CC7.2": "Insufficient"
+      },
+      "reason": "AES-256 encryption at rest with rotated KMS keys directly supports CC6.6, but a configuration report is not monitoring evidence and does not detect anomalies, so it cannot support CC7.2.",
+      "raw_output": "VERDICT_CC6.6: Sufficient\nVERDICT_CC7.2: Insufficient\nREASON: AES-256 encryption at rest with rotated KMS keys directly supports CC6.6, but a configuration report is not monitoring evidence and does not detect anomalies, so it cannot support CC7.2.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T5",
+      "verdict": "Insufficient",
+      "reason": "The ticket was self-approved by the requester with no peer review, no testing evidence attached, and the emergency flag was used without the required post-hoc review.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The ticket was self-approved by the requester with no peer review, no testing evidence attached, and the emergency flag was used without the required post-hoc review.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T6",
+      "verdict": "Insufficient",
+      "reason": "The vendor report carves out the backup subsystem as a carved-out subservice organization, and the in-scope system stores its backups exactly there, so the clean opinion does not cover it.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The vendor report carves out the backup subsystem as a carved-out subservice organization, and the in-scope system stores its backups exactly there, so the clean opinion does not cover it.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T7",
+      "verdict": "Insufficient",
+      "reason": "Exports for Sep 14, 15 and 16 are missing, a 3-day gap in the 30-day sequence, and the attestation claiming no gaps contradicts the artifacts.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Exports for Sep 14, 15 and 16 are missing, a 3-day gap in the 30-day sequence, and the attestation claiming no gaps contradicts the artifacts.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T8",
+      "verdict": "Sufficient",
+      "reason": "The report covers all 41 users with no exemptions, the config export is dated in period, and sampled login events show MFA challenges corroborating enforcement.",
+      "raw_output": "VERDICT: Sufficient\nREASON: The report covers all 41 users with no exemptions, the config export is dated in period, and sampled login events show MFA challenges corroborating enforcement.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T9",
+      "verdict": "Insufficient",
+      "reason": "All 30 nightly backup jobs show Success, but there is no restore test record anywhere in the evidence: successful backups prove data was copied, not that it can be restored, and the quarterly restore testing the policy requires is unevidenced.",
+      "raw_output": "VERDICT: Insufficient\nREASON: All 30 nightly backup jobs show Success, but there is no restore test record anywhere in the evidence: successful backups prove data was copied, not that it can be restored, and the quarterly restore testing the policy requires is unevidenced.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T10",
+      "verdict": "Sufficient",
+      "reason": "The test was performed in period on the production scope; the critical finding was remediated and confirmed closed on retest, and the two medium findings were formally risk-accepted by the CISO with compensating controls and a scheduled retest, so all findings are dispositioned.",
+      "raw_output": "VERDICT: Sufficient\nREASON: The test was performed in period on the production scope; the critical finding was remediated and confirmed closed on retest, and the two medium findings were formally risk-accepted by the CISO with compensating controls and a scheduled retest, so all findings are dispositioned.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T11",
+      "verdict": "Insufficient",
+      "reason": "The evidence is a SOC 2 Type I report: it opines only on the design of controls as of a point in time (November 15, 2026) and expressly does not evaluate operating effectiveness over a period, so it cannot support an operating-effectiveness claim for Oct 1 - Dec 31, 2026.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The evidence is a SOC 2 Type I report: it opines only on the design of controls as of a point in time (November 15, 2026) and expressly does not evaluate operating effectiveness over a period, so it cannot support an operating-effectiveness claim for Oct 1 - Dec 31, 2026.",
+      "latency_s": 0.0
+    },
+    {
+      "id": "T12",
+      "verdict": "Insufficient",
+      "reason": "CHG-5102 was deployed on Mar 9 at 22:40, before approval was recorded on Mar 10 at 09:00, and CHG-5105 was self-approved by its own requester, so not every change was independently approved before deployment.",
+      "raw_output": "VERDICT: Insufficient\nREASON: CHG-5102 was deployed on Mar 9 at 22:40, before approval was recorded on Mar 10 at 09:00, and CHG-5105 was self-approved by its own requester, so not every change was independently approved before deployment.",
+      "latency_s": 0.0
+    }
+  ]
+}

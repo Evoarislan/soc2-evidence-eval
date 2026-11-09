@@ -1,0 +1,83 @@
+{
+  "eval": "SOC 2 Evidence Judgment Eval (micro1 Eval Hackathon)",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "temperature": 0,
+  "mode": "live",
+  "system_prompt_variant": "neutral",
+  "timestamp_utc": "2026-11-05T17:23:03Z",
+  "tasks": [
+    {
+      "id": "T1",
+      "verdict": "Insufficient",
+      "reason": "Contractors group (3 users) is exempt from MFA per group policy, contradicting \"all workforce users\".",
+      "raw_output": "VERDICT: Insufficient\nREASON: Contractors group (3 users) is exempt from MFA per group policy, contradicting \"all workforce users\".",
+      "latency_s": 14.614
+    },
+    {
+      "id": "T2",
+      "verdict": "Insufficient",
+      "reason": "No vulnerability scans occurred during the observation period (Apr 1\u2013Jun 30, 2026); scan history shows a gap from Mar 3 to Jul 8, 2026.",
+      "raw_output": "VERDICT: Insufficient\nREASON: No vulnerability scans occurred during the observation period (Apr 1\u2013Jun 30, 2026); scan history shows a gap from Mar 3 to Jul 8, 2026.",
+      "latency_s": 12.712
+    },
+    {
+      "id": "T3",
+      "verdict": "Insufficient",
+      "reason": "Terminated user Daniel Reyes still active in IdP 18 days post-termination with login activity on 2026-06-29, contradicting prompt removal claim.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Terminated user Daniel Reyes still active in IdP 18 days post-termination with login activity on 2026-06-29, contradicting prompt removal claim.",
+      "latency_s": 18.855
+    },
+    {
+      "id": "T4",
+      "verdict": {
+        "CC6.6": "Sufficient",
+        "CC7.2": "Insufficient"
+      },
+      "reason": "The encryption configuration report confirms AES-256 encryption with managed KMS for all production data stores satisfying CC6.6, but contains no information about system monitoring or anomaly detection required for CC7.2.",
+      "raw_output": "VERDICT_CC6.6: Sufficient\nVERDICT_CC7.2: Insufficient\nREASON: The encryption configuration report confirms AES-256 encryption with managed KMS for all production data stores satisfying CC6.6, but contains no information about system monitoring or anomaly detection required for CC7.2.",
+      "latency_s": 8.561
+    },
+    {
+      "id": "T5",
+      "verdict": "Insufficient",
+      "reason": "Change ticket CHG-4417 shows self-approval (prohibited), no testing evidence attached, and no post-hoc review within 5 business days for an emergency change, violating multiple policy requirements.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Change ticket CHG-4417 shows self-approval (prohibited), no testing evidence attached, and no post-hoc review within 5 business days for an emergency change, violating multiple policy requirements.",
+      "latency_s": 15.044
+    },
+    {
+      "id": "T6",
+      "verdict": "Insufficient",
+      "reason": "The VaultKeep SOC 2 report carves out the managed backup subsystem (backup storage, replication, and restore services), which is exactly the subsystem Copperline uses for production backups per the data flow note.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The VaultKeep SOC 2 report carves out the managed backup subsystem (backup storage, replication, and restore services), which is exactly the subsystem Copperline uses for production backups per the data flow note.",
+      "latency_s": 10.233
+    },
+    {
+      "id": "T7",
+      "verdict": "Insufficient",
+      "reason": "Missing audit log exports for September 14-16, 2026, indicating gaps in the log sequence.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Missing audit log exports for September 14-16, 2026, indicating gaps in the log sequence.",
+      "latency_s": 8.057
+    },
+    {
+      "id": "T8",
+      "verdict": "Sufficient",
+      "reason": "The IdP configuration export (within period) shows tenant policy requires MFA for all users with no exemptions, the enforcement report confirms all 41 workforce accounts have MFA enforced with zero exemptions, and sampled login events demonstrate successful MFA challenges during the observation period.",
+      "raw_output": "VERDICT: Sufficient\nREASON: The IdP configuration export (within period) shows tenant policy requires MFA for all users with no exemptions, the enforcement report confirms all 41 workforce accounts have MFA enforced with zero exemptions, and sampled login events demonstrate successful MFA challenges during the observation period.",
+      "latency_s": 17.148
+    },
+    {
+      "id": "T9",
+      "verdict": "Insufficient",
+      "reason": "Only backup job completion logs provided; no restore test records showing quarterly restore testing was performed during Jul-Sep 2026 observation period.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Only backup job completion logs provided; no restore test records showing quarterly restore testing was performed during Jul-Sep 2026 observation period.",
+      "latency_s": 11.234
+    },
+    {
+      "id": "T10",
+      "verdict": "Sufficient",
+      "reason": "Annual penetration testing performed (Aug 2025 and Aug 2026), critical finding remediated and retested, medium findings formally risk-accepted with compensating controls and retest dates, low/info findings tracked with target dates.",
+      "raw_output": "VERDICT: Sufficient\nREASON: Annual penetration testing performed (Aug 2025 and Aug 2026), critical finding remediated and retested, medium findings formally risk-accepted with compensating controls and retest dates, low/info findings tracked with target dates.",
+      "latency_s": 13.894
+    }
+  ]
+}

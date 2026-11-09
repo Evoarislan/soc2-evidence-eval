@@ -1,0 +1,131 @@
+{
+  "model": "mock:naive",
+  "score": 2.5,
+  "max_score": 12.0,
+  "score_pct": 20.8,
+  "reason_hits": 2,
+  "reason_units": 13,
+  "reason_hit_rate": 0.154,
+  "per_task": [
+    {
+      "id": "T1",
+      "points": 0.0,
+      "max_points": 1.0,
+      "expected": "Insufficient",
+      "got": "Sufficient",
+      "correct": false,
+      "reason_hit": false
+    },
+    {
+      "id": "T2",
+      "points": 0.0,
+      "max_points": 1.0,
+      "expected": "Insufficient",
+      "got": "Sufficient",
+      "correct": false,
+      "reason_hit": false
+    },
+    {
+      "id": "T3",
+      "points": 0.0,
+      "max_points": 1.0,
+      "expected": "Insufficient",
+      "got": "Sufficient",
+      "correct": false,
+      "reason_hit": false
+    },
+    {
+      "id": "T4",
+      "points": 0.5,
+      "max_points": 1.0,
+      "units": [
+        {
+          "control": "CC6.6",
+          "expected": "Sufficient",
+          "got": "Sufficient",
+          "correct": true,
+          "reason_hit": true
+        },
+        {
+          "control": "CC7.2",
+          "expected": "Insufficient",
+          "got": "Sufficient",
+          "correct": false,
+          "reason_hit": false
+        }
+      ]
+    },
+    {
+      "id": "T5",
+      "points": 0.0,
+      "max_points": 1.0,
+      "expected": "Insufficient",
+      "got": "Sufficient",
+      "correct": false,
+      "reason_hit": false
+    },
+    {
+      "id": "T6",
+      "points": 0.0,
+      "max_points": 1.0,
+      "expected": "Insufficient",
+      "got": "Sufficient",
+      "correct": false,
+      "reason_hit": false
+    },
+    {
+      "id": "T7",
+      "points": 0.0,
+      "max_points": 1.0,
+      "expected": "Insufficient",
+      "got": "Sufficient",
+      "correct": false,
+      "reason_hit": true
+    },
+    {
+      "id": "T8",
+      "points": 1.0,
+      "max_points": 1.0,
+      "expected": "Sufficient",
+      "got": "Sufficient",
+      "correct": true,
+      "reason_hit": false
+    },
+    {
+      "id": "T9",
+      "points": 0.0,
+      "max_points": 1.0,
+      "expected": "Insufficient",
+      "got": "Sufficient",
+      "correct": false,
+      "reason_hit": false
+    },
+    {
+      "id": "T10",
+      "points": 1.0,
+      "max_points": 1.0,
+      "expected": "Sufficient",
+      "got": "Sufficient",
+      "correct": true,
+      "reason_hit": false
+    },
+    {
+      "id": "T11",
+      "points": 0.0,
+      "max_points": 1.0,
+      "expected": "Insufficient",
+      "got": "Sufficient",
+      "correct": false,
+      "reason_hit": false
+    },
+    {
+      "id": "T12",
+      "points": 0.0,
+      "max_points": 1.0,
+      "expected": "Insufficient",
+      "got": "Sufficient",
+      "correct": false,
+      "reason_hit": false
+    }
+  ]
+}

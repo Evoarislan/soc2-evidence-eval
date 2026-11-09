@@ -1,0 +1,7 @@
+# Sampled production login events (IdP sign-in log extract, Q3 2026)
+2026-08-14T13:02:11Z user.login.start user=amara.fuentes@copperline.example result=mfa_challenge_issued
+2026-08-14T13:02:29Z user.login.mfa user=amara.fuentes@copperline.example factor=authenticator_app result=success
+2026-08-14T13:02:29Z user.login.complete user=amara.fuentes@copperline.example result=success
+2026-09-09T09:44:03Z user.login.start user=marcus.marsh@copperline.example result=mfa_challenge_issued
+2026-09-09T09:44:31Z user.login.mfa user=marcus.marsh@copperline.example factor=hardware_key result=success
+2026-09-09T09:44:31Z user.login.complete user=marcus.marsh@copperline.example result=success

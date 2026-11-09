@@ -1,0 +1,97 @@
+{
+  "eval": "SOC 2 Evidence Judgment Eval (micro1 Eval Hackathon)",
+  "model": "meta-api:muse-spark-1.3",
+  "temperature": 0,
+  "mode": "live",
+  "system_prompt_variant": "neutral",
+  "timestamp_utc": "2026-11-05T18:37:34Z",
+  "tasks": [
+    {
+      "id": "T1",
+      "verdict": "Insufficient",
+      "reason": "Evidence shows 3 contractor workforce accounts are exempt from MFA and had sign-ins without MFA challenge.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Evidence shows 3 contractor workforce accounts are exempt from MFA and had sign-ins without MFA challenge.",
+      "latency_s": 5.716
+    },
+    {
+      "id": "T2",
+      "verdict": "Insufficient",
+      "reason": "No scans evidenced during Apr 1-Jun 30 observation period and one March finding exceeded 30-day remediation SLA.",
+      "raw_output": "VERDICT: Insufficient\nREASON: No scans evidenced during Apr 1-Jun 30 observation period and one March finding exceeded 30-day remediation SLA.",
+      "latency_s": 8.023
+    },
+    {
+      "id": "T3",
+      "verdict": "Insufficient",
+      "reason": "Terminated user Daniel Reyes (effective 2026-06-12) remains Active in 2026-06-30 IdP export with post-termination login on 2026-06-29.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Terminated user Daniel Reyes (effective 2026-06-12) remains Active in 2026-06-30 IdP export with post-termination login on 2026-06-29.",
+      "latency_s": 5.236
+    },
+    {
+      "id": "T4",
+      "verdict": {
+        "CC6.6": "Sufficient",
+        "CC7.2": "Insufficient"
+      },
+      "reason": "Encryption report confirms AES-256 on all production stores but contains no system monitoring or anomaly detection evidence.",
+      "raw_output": "VERDICT_CC6.6: Sufficient\nVERDICT_CC7.2: Insufficient\nREASON: Encryption report confirms AES-256 on all production stores but contains no system monitoring or anomaly detection evidence.",
+      "latency_s": 7.97
+    },
+    {
+      "id": "T5",
+      "verdict": "Insufficient",
+      "reason": "Ticket shows self-approval by requester, no testing evidence, and no post-hoc review as of 2026-06-30 in violation of policy.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Ticket shows self-approval by requester, no testing evidence, and no post-hoc review as of 2026-06-30 in violation of policy.",
+      "latency_s": 6.095
+    },
+    {
+      "id": "T6",
+      "verdict": "Insufficient",
+      "reason": "The SOC 2 report explicitly carves out the managed backup subsystem where all production backups reside, so it does not cover the relevant vendor service.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The SOC 2 report explicitly carves out the managed backup subsystem where all production backups reside, so it does not cover the relevant vendor service.",
+      "latency_s": 10.275
+    },
+    {
+      "id": "T7",
+      "verdict": "Insufficient",
+      "reason": "Audit log exports for Sep 14-16, 2026 are missing, contradicting attestation of complete daily logs with no gaps.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Audit log exports for Sep 14-16, 2026 are missing, contradicting attestation of complete daily logs with no gaps.",
+      "latency_s": 5.497
+    },
+    {
+      "id": "T8",
+      "verdict": "Insufficient",
+      "reason": "Sampled login events reference amara.osei@ and marcus.webb@ who are absent from the 41-user enforcement report, undermining population completeness.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Sampled login events reference amara.osei@ and marcus.webb@ who are absent from the 41-user enforcement report, undermining population completeness.",
+      "latency_s": 11.524
+    },
+    {
+      "id": "T9",
+      "verdict": "Insufficient",
+      "reason": "No restore test record in Jul 1-Sep 30 period was provided, and policy states backup job logs alone do not prove restorability.",
+      "raw_output": "VERDICT: Insufficient\nREASON: No restore test record in Jul 1-Sep 30 period was provided, and policy states backup job logs alone do not prove restorability.",
+      "latency_s": 4.679
+    },
+    {
+      "id": "T10",
+      "verdict": "Sufficient",
+      "reason": "Annual test completed Aug 2026 (prior Aug 2025) with critical remediated and retested, mediums formally risk-accepted by CISO with compensating controls and retest date.",
+      "raw_output": "VERDICT: Sufficient\nREASON: Annual test completed Aug 2026 (prior Aug 2025) with critical remediated and retested, mediums formally risk-accepted by CISO with compensating controls and retest date.",
+      "latency_s": 24.155
+    },
+    {
+      "id": "T11",
+      "verdict": "Insufficient",
+      "reason": "Type I report opines only on design suitability as of Nov 15, 2026 and expressly disclaims any opinion on operating effectiveness over any period.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Type I report opines only on design suitability as of Nov 15, 2026 and expressly disclaims any opinion on operating effectiveness over any period.",
+      "latency_s": 5.522
+    },
+    {
+      "id": "T12",
+      "verdict": "Insufficient",
+      "reason": "CHG-5102 deployed 2026-03-09 22:40 before approval 2026-03-10 09:00 and CHG-5105 self-approved by requester S. Patel.",
+      "raw_output": "VERDICT: Insufficient\nREASON: CHG-5102 deployed 2026-03-09 22:40 before approval 2026-03-10 09:00 and CHG-5105 self-approved by requester S. Patel.",
+      "latency_s": 10.116
+    }
+  ]
+}

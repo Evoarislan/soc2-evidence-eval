@@ -1,0 +1,82 @@
+{
+  "eval": "SOC 2 Evidence Judgment Eval (micro1 Eval Hackathon)",
+  "model": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "temperature": 0,
+  "mode": "live",
+  "timestamp_utc": "2026-11-05T17:00:40Z",
+  "tasks": [
+    {
+      "id": "T1",
+      "verdict": "Insufficient",
+      "reason": "Contractors are exempt from MFA per group policy, so MFA is not enforced for all workforce users.",
+      "raw_output": "VERDICT: Insufficient  \nREASON: Contractors are exempt from MFA per group policy, so MFA is not enforced for all workforce users.",
+      "latency_s": 4.103
+    },
+    {
+      "id": "T2",
+      "verdict": "Insufficient",
+      "reason": "No vulnerability scan occurred during the Apr\u202f1\u202f\u2013\u202fJun\u202f30\u202f2026 observation window, so weekly scanning and SLA\u2011compliant remediation cannot be demonstrated.",
+      "raw_output": "VERDICT: Insufficient\nREASON: No vulnerability scan occurred during the Apr\u202f1\u202f\u2013\u202fJun\u202f30\u202f2026 observation window, so weekly scanning and SLA\u2011compliant remediation cannot be demonstrated.",
+      "latency_s": 4.003
+    },
+    {
+      "id": "T3",
+      "verdict": "Insufficient",
+      "reason": "The terminated user Daniel Reyes is still listed as Active in the IdP export after his termination date, showing he was not removed promptly.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The terminated user Daniel Reyes is still listed as Active in the IdP export after his termination date, showing he was not removed promptly.",
+      "latency_s": 7.627
+    },
+    {
+      "id": "T4",
+      "verdict": {
+        "CC6.6": "Sufficient",
+        "CC7.2": "Insufficient"
+      },
+      "reason": "CC6.6 evidence shows encryption enabled for all production data stores with proper key management; CC7.2 evidence contains no system monitoring or anomaly detection information.",
+      "raw_output": "VERDICT_CC6.6: Sufficient\nVERDICT_CC7.2: Insufficient\nREASON: CC6.6 evidence shows encryption enabled for all production data stores with proper key management; CC7.2 evidence contains no system monitoring or anomaly detection information.",
+      "latency_s": 6.747
+    },
+    {
+      "id": "T5",
+      "verdict": "Insufficient",
+      "reason": "The ticket shows self\u2011approval by the requester and no attached testing evidence, violating the policy\u2019s approval and testing requirements.",
+      "raw_output": "VERDICT: Insufficient  \nREASON: The ticket shows self\u2011approval by the requester and no attached testing evidence, violating the policy\u2019s approval and testing requirements.",
+      "latency_s": 3.552
+    },
+    {
+      "id": "T6",
+      "verdict": "Insufficient",
+      "reason": "The SOC\u202f2 report excludes the vendor\u2019s backup subsystem, so CC9.2 vendor monitoring is not covered.",
+      "raw_output": "VERDICT: Insufficient\nREASON: The SOC\u202f2 report excludes the vendor\u2019s backup subsystem, so CC9.2 vendor monitoring is not covered.",
+      "latency_s": 4.682
+    },
+    {
+      "id": "T7",
+      "verdict": "Insufficient",
+      "reason": "Missing audit logs for Sep\u202f14\u201116 and no independent proof of 90\u2011day retention.",
+      "raw_output": "VERDICT: Insufficient\nREASON: Missing audit logs for Sep\u202f14\u201116 and no independent proof of 90\u2011day retention.",
+      "latency_s": 28.19
+    },
+    {
+      "id": "T8",
+      "verdict": "Sufficient",
+      "reason": "All 41 workforce accounts are confirmed MFA\u2011enforced for the full July\u2011September 2026 period with no exemptions, and sampled login events verify MFA challenges were issued and completed.",
+      "raw_output": "VERDICT: Sufficient\nREASON: All 41 workforce accounts are confirmed MFA\u2011enforced for the full July\u2011September 2026 period with no exemptions, and sampled login events verify MFA challenges were issued and completed.",
+      "latency_s": 4.288
+    },
+    {
+      "id": "T9",
+      "verdict": "Insufficient",
+      "reason": "No restore test records are provided for Jul\u202f1\u2011Sep\u202f30\u202f2026, only backup job logs.",
+      "raw_output": "VERDICT: Insufficient\nREASON: No restore test records are provided for Jul\u202f1\u2011Sep\u202f30\u202f2026, only backup job logs.",
+      "latency_s": 6.532
+    },
+    {
+      "id": "T10",
+      "verdict": "Sufficient",
+      "reason": "The 2026 penetration test was conducted annually (Aug\u202f2025 \u2192 Aug\u202f2026) and all identified findings were either remediated or formally risk\u2011accepted with compensating controls and scheduled verification.",
+      "raw_output": "VERDICT: Sufficient\nREASON: The 2026 penetration test was conducted annually (Aug\u202f2025 \u2192 Aug\u202f2026) and all identified findings were either remediated or formally risk\u2011accepted with compensating controls and scheduled verification.",
+      "latency_s": 3.201
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+user_name,email,user_type,mfa_enforced
+Amara Fuentes,amara.fuentes@copperline.example,Employee,Yes
+Ben Costa,ben.costa@copperline.example,Employee,Yes
+Priya Petrov,priya.petrov@copperline.example,Employee,Yes
+Diego Ali,diego.ali@copperline.example,Employee,Yes
+Sofia Rivas,sofia.rivas@copperline.example,Employee,Yes
+Marcus Marsh,marcus.marsh@copperline.example,Contractor,No (group policy exempt)
+Lena Lindberg,lena.lindberg@copperline.example,Employee,Yes
+Tom Berg,tom.berg@copperline.example,Employee,Yes
+Grace Chen,grace.chen@copperline.example,Employee,Yes
+Omar Novak,omar.novak@copperline.example,Employee,Yes
+Ines Kovac,ines.kovac@copperline.example,Employee,Yes
+Karl Petrov,karl.petrov@copperline.example,Employee,Yes
+Nadia Webb,nadia.webb@copperline.example,Employee,Yes
+Peter Aziz,peter.aziz@copperline.example,Employee,Yes
+Ruth Ali,ruth.ali@copperline.example,Employee,Yes
+Sam Kim,sam.kim@copperline.example,Employee,Yes
+Tara Osei,tara.osei@copperline.example,Employee,Yes
+Victor Lindqvist,victor.lindqvist@copperline.example,Employee,Yes
+Wendy Fischer,wendy.fischer@copperline.example,Employee,Yes
+Yusuf Novak,yusuf.novak@copperline.example,Contractor,No (group policy exempt)
+Zoe Novak,zoe.novak@copperline.example,Employee,Yes
+Alan Singh,alan.singh@copperline.example,Employee,Yes
+Bianca Weber,bianca.weber@copperline.example,Employee,Yes
+Carl Osei,carl.osei@copperline.example,Employee,Yes
+Dana Baker,dana.baker@copperline.example,Employee,Yes
+Emil Kim,emil.kim@copperline.example,Employee,Yes
+Farah Reed,farah.reed@copperline.example,Employee,Yes
+Greg Park,greg.park@copperline.example,Employee,Yes
+Hana Haddad,hana.haddad@copperline.example,Employee,Yes
+Ivan Kowalski,ivan.kowalski@copperline.example,Employee,Yes
+Julia Liu,julia.liu@copperline.example,Employee,Yes
+Kofi Ortiz,kofi.ortiz@copperline.example,Employee,Yes
+Laura Moreau,laura.moreau@copperline.example,Employee,Yes
+Milan Dubois,milan.dubois@copperline.example,Contractor,No (group policy exempt)
+Nora Iversen,nora.iversen@copperline.example,Employee,Yes
+Oscar Nair,oscar.nair@copperline.example,Employee,Yes
+Paula Haddad,paula.haddad@copperline.example,Employee,Yes
+Ravi Sharma,ravi.sharma@copperline.example,Employee,Yes
+Stella Haugen,stella.haugen@copperline.example,Employee,Yes
+Umar Mensah,umar.mensah@copperline.example,Employee,Yes
+Vera Khan,vera.khan@copperline.example,Employee,Yes
